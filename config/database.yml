@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: postgres
+  host: localhost
+  pool: 5
+
+development:
+  <<: *default
+  database: ruby_guard_development
+
+test:
+  <<: *default
+  database: ruby_guard_test
+
+production:
+  <<: *default
