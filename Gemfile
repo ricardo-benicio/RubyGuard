@@ -21,6 +21,11 @@ gem 'tailwindcss-rails', '~> 2.0'
 gem 'turbo-rails'
 gem 'tzinfo-data', platforms: %i[windows jruby]
 
+# API
+gem "devise-jwt", "~> 0.11.0"
+gem "rack-cors", "~> 2.0"
+gem "jsonapi-serializer", "~> 2.2"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
