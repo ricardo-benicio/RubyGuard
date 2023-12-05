@@ -20,6 +20,9 @@
       <span><%= link_to 'RubyGuard', root_path, class: "self-center text-2xl font-semibold whitespace-nowrap dark:text-white"%></span>
       </a>
       <% if user_signed_in? %>
+        <div class="flex items-center md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse">
+          <a> <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800" %> </a>
+        </div>
 
         <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
           <%= current_user.email %>
