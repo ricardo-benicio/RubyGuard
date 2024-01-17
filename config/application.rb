@@ -26,5 +26,13 @@ module RubyGuard
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
     config.factory_bot.definition_file_paths = ['custom/factories']
+
+    # this also configures session_options for use below
+    config.session_store :cookie_store, key: '_interslice_session'
+
+    # required for all session management (regardless of session_store)
+    config.middleware.use ActionDispatch::Cookies
+
+    config.middleware.use config.session_store, config.session_options
   end
 end
